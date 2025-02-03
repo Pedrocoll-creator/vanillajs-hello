@@ -1,8 +1,5 @@
-/* eslint-disable */
-import "bootstrap"; 
-import "./style.css";  
-
-window.addEventListener("DOMContentLoaded", function () {
+window.onload = function() {
+  // array with the words
   let first = "A ";
   let adj = [
     "two headed ",
@@ -13,7 +10,7 @@ window.addEventListener("DOMContentLoaded", function () {
     "glowing ",
     "smelly ",
     "slow ",
-    "old ",
+    "old "
   ];
   let noun = [
     "jogger ",
@@ -22,7 +19,7 @@ window.addEventListener("DOMContentLoaded", function () {
     "merchant ",
     "driver ",
     "comedian ",
-    "pinecone ",
+    "pinecone "
   ];
   let action = [
     "took my ",
@@ -32,7 +29,7 @@ window.addEventListener("DOMContentLoaded", function () {
     "stole my ",
     "burned my ",
     "bit my ",
-    "hit my ",
+    "hit my "
   ];
   let possetion = [
     "toe ",
@@ -44,7 +41,7 @@ window.addEventListener("DOMContentLoaded", function () {
     "keys ",
     "computer ",
     "phone ",
-    "sandwich ",
+    "sandwich "
   ];
   let where = [
     "on the street",
@@ -53,17 +50,15 @@ window.addEventListener("DOMContentLoaded", function () {
     "in front of the office",
     "near the mall",
     "near the toilet",
-    "at the bus station",
+    "at the bus station"
   ];
 
-  
   let rdm1 = Math.floor(Math.random() * adj.length);
   let rdm2 = Math.floor(Math.random() * noun.length);
   let rdm3 = Math.floor(Math.random() * action.length);
   let rdm4 = Math.floor(Math.random() * possetion.length);
   let rdm5 = Math.floor(Math.random() * where.length);
 
-  
   document.querySelector("#excuse").innerHTML =
     first +
     adj[rdm1] +
@@ -71,4 +66,4 @@ window.addEventListener("DOMContentLoaded", function () {
     action[rdm3] +
     possetion[rdm4] +
     where[rdm5];
-});
+};
